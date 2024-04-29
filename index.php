@@ -30,38 +30,38 @@
                             <th>ID</th>
                             <th>Nama</th>
                             <th>Jekel</th>
-                            <th>Alamat</th>
+                            <th>Alamat Lengkap</th>
                             <th>Aksi</th>
                         </tr>
                         <?php
-                        include('model.php');
+                        include ('model.php');
                         $model = new Model();
-                        $rows =$model->fetch();
+                        $rows = $model->fetch();
                         // var_dump($rows);
                         $nomor = 1;
-                        if(!empty($rows)){
-                            foreach($rows as $row){
-                    ?>
-                    <tbody>
-                        <tr>
-                            <td><?= $nomor;?></td>
-                            <td><?= $row['id'];?></td>
-                            <td><?= $row['nama'];?></td>
-                            <td><?= $row['jekel'];?></td>
-                            <td><?= $row['alamat'];?></td>
-                            <td>
-                                <a href="biodatadetail.php?id=<?= $row['id'];?>" class="badge bg-success">Detail</a>
-                                <a href="biodataedit.php?id=<?= $row['id'];?>" class="badge bg-warning">Edit</a>
-                                <a href="biodatadelete.php?id=<?= $row['id'];?>" class="badge bg-primary">Delete</a>
-                            </td>
-                        </tr>
-                    </tbody>
-                    </thead>
-                    <?php 
-                $nomor++;
-                    }
-                }
-                ?>
+                        if (!empty($rows)) {
+                            foreach ($rows as $row) {
+                                ?>
+                            <tbody>
+                                <tr>
+                                    <td><?= $nomor; ?></td>
+                                    <td><?= $row['id']; ?></td>
+                                    <td><?= $row['nama']; ?></td>
+                                    <td><?= $row['jekel']; ?></td>
+                                    <td><?= $row['alamat']; ?></td>
+                                    <td>
+                                        <a href="biodatadetail.php?id=<?= $row['id']; ?>" class="badge bg-success">Detail</a>
+                                        <a href="biodataedit.php?id=<?= $row['id']; ?>" class="badge bg-warning">Edit</a>
+                                        <a href="biodatadelete.php?id=<?= $row['id']; ?>" class="badge bg-primary">Delete</a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                            </thead>
+                            <?php
+                            $nomor++;
+                            }
+                        }
+                        ?>
                 </table>
             </div><!-- end col2-->
         </div> <!-- end row2-->
@@ -88,7 +88,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous">
-    </script>
+        </script>
 </body>
 
 </html>
