@@ -28,7 +28,7 @@
                         <tr>
                             <th>NO</th>
                             <th>ID</th>
-                            <th>Nama</th>
+                            <th>Nama Lengkap</th>
                             <th>Jekel</th>
                             <th>Alamat Lengkap</th>
                             <th>Aksi</th>
